@@ -1,5 +1,4 @@
 import "./globals.css";
-import Providers from "../contexts/Providers";
 
 export const metadata = {
   title: "Minha Aplicação",
@@ -10,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );

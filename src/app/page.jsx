@@ -79,10 +79,10 @@ export default function Home() {
 
   // 🔹 Mensagens personalizáveis:
   const messages = {
-    10: "Estamos quase lá ❤️",
-    20: "Está estressada né? Que bom, mas continue por favor!!",
-    30: "Só mais um pouco. Você é uma gostosa",
-    40: "Estamos mais perto, Ana Carolynne.                    Eu acho!!",
+    20: "Estamos quase lá ❤️",
+    40: "Está estressada né? Que bom, mas continue por favor!!",
+    60: "Só mais um pouco. Você é uma gostosa 😘",
+    80: "Estamos mais perto, Ana Carolynne... Eu acho!! 😂",
   };
 
   function moveButton() {
@@ -99,8 +99,8 @@ export default function Home() {
       setShowButton(false);
       setShowMessage(messages[newCount]);
 
-      // Após a segunda mensagem (20 cliques), mostrar a foto
-      if (newCount === 20) {
+      // Após a segunda mensagem (40 cliques), mostrar a foto
+      if (newCount === 40) {
         setTimeout(() => {
           setShowMessage("");
           setShowImage(true);
@@ -117,8 +117,8 @@ export default function Home() {
       }
     }
 
-    // Após 50 cliques → mostra "Eu te amo" e a foto
-    if (newCount === 50) {
+    // Após 100 cliques → mostra "Eu te amo" e a foto final
+    if (newCount === 100) {
       setShowButton(false);
       setShowFinal(true);
     }
@@ -146,7 +146,7 @@ export default function Home() {
       {/* Foto após a segunda mensagem */}
       {showImage && (
         <Image
-          src="foto.JPG" // 👉 coloque aqui a imagem que quiser
+          src="foto.JPG" // 👉 coloque aqui a imagem intermediária
           alt="Surpresa"
         />
       )}
